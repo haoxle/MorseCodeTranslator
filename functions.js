@@ -53,19 +53,25 @@ const translateEnglish = (e) => {
   if (empty) {
     container.textContent = `Enter Something`;
   } else {
-    container.textContent = "";
-    const morse = engrish.toLowerCase().split("");
-    morse.forEach((letter) => (container.textContent += alphabet[letter]));
+    // container.textContent = "";
+    // const morse = engrish.toLowerCase().split("");
+    // morse.forEach((letter) => (container.textContent += alphabet[letter]));
+    const display = checkValidCharacters(engrish);
+    container.textContent = display;
   }
 };
 
-const checkHello = (text) => {
+const checkValidCharacters = (text) => {
   let result = "";
   const morse = text.toLowerCase().split("");
-  morse.forEach((letter) => (result += alphabet[letter]));
+  morse.forEach((letter) => {
+    if (alphabet[letter]) {
+      result += alphabet[letter];
+    }
+  });
   return result.trim();
 };
-
+// you could put this into the above function
 const checkIfEmpty = (text) => {
   if (text.length === 0) {
     return true;
@@ -74,4 +80,4 @@ const checkIfEmpty = (text) => {
   }
 };
 
-module.exports = { checkIfEmpty, translateEnglish, checkHello };
+module.exports = { checkIfEmpty, translateEnglish, checkValidCharacters };
