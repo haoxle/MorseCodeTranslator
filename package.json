@@ -1,0 +1,26 @@
+{
+  "name": "morsecodetranslator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haoxle/MorseCodeTranslator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haoxle/MorseCodeTranslator/issues"
+  },
+  "homepage": "https://github.com/haoxle/MorseCodeTranslator#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.4",
+    "babel-jest": "^29.1.2",
+    "jest": "^29.1.2"
+  }
+}
