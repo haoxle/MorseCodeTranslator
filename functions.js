@@ -1,3 +1,52 @@
+const alphabet = {
+  "a": ".- / ",
+  "b": "-... / ",
+  "c": "-.-. / ",
+  "d": "-.. / ",
+  "e": ". / ",
+  "f": "..-. / ",
+  "g": "--. / ",
+  "h": ".... / ",
+  "i": ".. / ",
+  "j": ".--- / ",
+  "k": "-.- / ",
+  "l": ".-.. / ",
+  "m": "-- / ",
+  "n": "-. / ",
+  "o": "--- / ",
+  "p": ".--. / ",
+  "q": "--.- / ",
+  "r": ".-. / ",
+  "s": "... / ",
+  "t": "- / ",
+  "u": "..- / ",
+  "v": "...- / ",
+  "w": ".-- / ",
+  "x": "-..- / ",
+  "y": "-.-- / ",
+  "z": "--.. / ",
+  "0": "----- / ",
+  "1": ".---- / ",
+  "2": "..-- / ",
+  "3": "...-- / ",
+  "4": "....- / ",
+  "5": "----- / ",
+  "6": "-.... / ",
+  "7": "--.... / ",
+  "8": "---.. / ",
+  "9": "----. / ",
+  ".": ".-.-.- / ",
+  ",": "--..-- / ",
+  ":": "---... / ",
+  "'": ".----. / ",
+  '"': ".----. / ",
+  "-": "-....- / ",
+  "@": ".--.-. / ",
+  "=": "-...- / ",
+  " ": "",
+  "?": "..--.. / ",
+  "/": "-..-. / ",
+};
 const translateEnglish = (e) => {
   const engrish = enterWord.value;
   const empty = checkIfEmpty(engrish);
@@ -6,9 +55,15 @@ const translateEnglish = (e) => {
   } else {
     container.textContent = "";
     const morse = engrish.toLowerCase().split("");
-    // .replace(/[^A-Za-z0-9]/gi, alphabet.key);
     morse.forEach((letter) => (container.textContent += alphabet[letter]));
   }
+};
+
+const checkHello = (text) => {
+  let result = "";
+  const morse = text.toLowerCase().split("");
+  morse.forEach((letter) => (result += alphabet[letter]));
+  return result.trim();
 };
 
 const checkIfEmpty = (text) => {
@@ -19,4 +74,4 @@ const checkIfEmpty = (text) => {
   }
 };
 
-// module.exports = { checkIfEmpty, translateEnglish };
+module.exports = { checkIfEmpty, translateEnglish, checkHello };

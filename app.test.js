@@ -1,23 +1,23 @@
-import { checkIfEmpty } from "./functions";
+import { checkIfEmpty, checkHello } from "./functions";
 
 describe("translateWord", () => {
   it("should translate hello", () => {
-    const result = translateEnglish("hello");
-    expect(result).toBe(".... . .-.. .-.. ---");
+    const result = checkHello("hello");
+    expect(result).toBe(".... / . / .-.. / .-.. / --- /");
   });
 
   it("should translate hello how are you", () => {
-    const result = translateEnglish("hello how are you");
+    const result = checkHello("hello how are you");
     expect(result).toBe(
-      ".... . .-.. .-.. --- / .... --- .-- / .- .-. . / -.-- --- ..-"
+      ".... / . / .-.. / .-.. / --- / .... / --- / .-- / .- / .-. / . / -.-- / --- / ..- /"
     );
   });
 });
 
 describe("translateWord Capital", () => {
   it("should translate HELLO", () => {
-    const result = translateEnglish("HELLO");
-    expect(result).toBe(".... . .-.. .-.. ---");
+    const result = checkHello("HELLO");
+    expect(result).toBe(".... / . / .-.. / .-.. / --- /");
   });
 });
 
