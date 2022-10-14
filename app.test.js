@@ -9,7 +9,7 @@ describe("translateWord", () => {
   it("should translate hello how are you", () => {
     const result = checkValidCharacters("hello how are you");
     expect(result).toBe(
-      ".... / . / .-.. / .-.. / --- / .... / --- / .-- / .- / .-. / . / -.-- / --- / ..- /"
+      ".... / . / .-.. / .-.. / --- / | .... / --- / .-- / | .- / .-. / . / | -.-- / --- / ..- /"
     );
   });
 });

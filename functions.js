@@ -43,7 +43,7 @@ const alphabet = {
   "-": "-....- / ",
   "@": ".--.-. / ",
   "=": "-...- / ",
-  " ": "",
+  " ": "| ",
   "?": "..--.. / ",
   "/": "-..-. / ",
 };
@@ -80,4 +80,15 @@ const checkIfEmpty = (text) => {
   }
 };
 
-module.exports = { checkIfEmpty, translateEnglish, checkValidCharacters };
+const resetAll = (e) => {
+  console.log("I have been clicked");
+  container.textContent = "";
+  enterWord.value = "";
+};
+
+module.exports = {
+  checkIfEmpty,
+  translateEnglish,
+  checkValidCharacters,
+  resetAll,
+};
