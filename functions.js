@@ -80,10 +80,20 @@ const checkIfEmpty = (text) => {
   }
 };
 
-const resetAll = (e) => {
-  console.log("I have been clicked");
-  container.textContent = "";
-  enterWord.value = "";
+const resetAll = (text) => {
+  const isItEmpty = checkReset(text);
+  if (text) {
+    container.textContent = "";
+    enterWord.value = "";
+  }
+};
+
+const checkReset = (text) => {
+  if (text.length > 0) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 module.exports = {
@@ -91,4 +101,5 @@ module.exports = {
   translateEnglish,
   checkValidCharacters,
   resetAll,
+  checkReset,
 };
