@@ -1,0 +1,81 @@
+@media screen and (min-width: 0px) and (max-width: 610px) {
+  body {
+    background-image: url("./images/phone.jpg");
+    background-size: cover;
+    .title {
+      text-align: center;
+      color: antiquewhite;
+      padding: 6%;
+    }
+    .translateEnglish {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      #translateEnglish__input {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        margin-top: 5%;
+        height: 20vh;
+        width: 70vw;
+        background-color: #22223b;
+        color: antiquewhite;
+        border: 3px solid #0d1b2a;
+        border-radius: 20px;
+      }
+      .translateEnglish__header {
+        color: antiquewhite;
+        text-align: center;
+      }
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5%;
+      #translate {
+        padding: 1%;
+        margin-right: 2%;
+        color: #e0b1cb;
+        background-color: #6d597a;
+        border-radius: 10px;
+        text-decoration: none;
+        display: inline-block;
+        border: 1px solid #22223b;
+      }
+      #reset {
+        padding: 1%;
+        margin-left: 2%;
+        background-color: #6d597a;
+        color: #e0b1cb;
+        border-radius: 10px;
+        text-decoration: none;
+        display: inline-block;
+        border: 1px solid #22223b;
+      }
+    }
+    .translateEnglish__translated {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #translateEnglish__translated__container {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        margin-top: 10%;
+        border-radius: 20px;
+        height: 30vh;
+        width: 70vw;
+        background-color: #22223b;
+        color: antiquewhite;
+        border: 3px solid #0d1b2a;
+      }
+    }
+  }
+}
+@media screen and (min-width: 611px) and (max-width: 910px) {
+}
+
+@media screen and (min-width: 911px) and (max-width: 7000px) {
+}

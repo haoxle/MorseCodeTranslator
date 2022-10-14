@@ -9,8 +9,9 @@
   </head>
   <body>
     <main>
+      <h1 class="title">MorseCode Translator</h1>
       <div class="translateEnglish">
-        <h1>Type & Translate</h1>
+        <h1 class="translateEnglish__header">Type & Translate</h1>
         <textarea
           name=""
           id="translateEnglish__input"
@@ -18,13 +19,12 @@
           rows="10"
         ></textarea>
       </div>
-      <div class="translateEnglish__translated">
-        <h1>Morse</h1>
-        <div><p id="translateEnglish__translated__container"></p></div>
-      </div>
-      <div>
+      <div class="buttons">
         <button id="translate">Translate</button>
         <button id="reset">Reset</button>
+      </div>
+      <div class="translateEnglish__translated">
+        <div><p id="translateEnglish__translated__container"></p></div>
       </div>
     </main>
   </body>
