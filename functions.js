@@ -7,9 +7,7 @@ const translateEnglish = (e) => {
     container.textContent = "";
     const morse = engrish.toLowerCase().split("");
     // .replace(/[^A-Za-z0-9]/gi, alphabet.key);
-    for (letter in morse) {
-      container.textContent += alphabet[letter];
-    }
+    morse.forEach((letter) => (container.textContent += alphabet[letter]));
   }
 };
 
