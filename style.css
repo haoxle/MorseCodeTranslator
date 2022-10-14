@@ -159,7 +159,7 @@
 }
 @media screen and (min-width: 911px) and (max-width: 7000px) {
   body {
-    background-image: url("./images/wallpaper.jpg");
+    background-image: url("./images/geometric-wallpaper.jpg");
     background-size: cover;
   }
   body .title {
@@ -200,7 +200,7 @@
   }
   body .buttons #translate {
     padding: 0.5%;
-    margin-right: 2%;
+    margin-right: 1%;
     color: #e0b1cb;
     background-color: #6d597a;
     border-radius: 10px;
