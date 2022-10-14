@@ -47,21 +47,8 @@ const alphabet = {
   "?": "..--.. / ",
   "/": "-..-. / ",
 };
-const translateEnglish = (e) => {
-  const engrish = enterWord.value;
-  const empty = checkIfEmpty(engrish);
-  if (empty) {
-    container.textContent = `Enter Something`;
-  } else {
-    // container.textContent = "";
-    // const morse = engrish.toLowerCase().split("");
-    // morse.forEach((letter) => (container.textContent += alphabet[letter]));
-    const display = checkValidCharacters(engrish);
-    container.textContent = display;
-  }
-};
 
-const checkValidCharacters = (text) => {
+export const checkValidCharacters = (text) => {
   let result = "";
   const morse = text.toLowerCase().split("");
   morse.forEach((letter) => {
@@ -72,7 +59,7 @@ const checkValidCharacters = (text) => {
   return result.trim();
 };
 
-const checkIfEmpty = (text) => {
+export const checkIfEmpty = (text) => {
   if (text.length === 0) {
     return true;
   } else {
@@ -80,26 +67,10 @@ const checkIfEmpty = (text) => {
   }
 };
 
-const resetAll = (text) => {
-  const isItEmpty = checkReset(text);
-  if (text) {
-    container.textContent = "";
-    enterWord.value = "";
-  }
-};
-
-const checkReset = (text) => {
+export const checkReset = (text) => {
   if (text.length > 0) {
     return true;
   } else {
     return false;
   }
-};
-
-module.exports = {
-  checkIfEmpty,
-  translateEnglish,
-  checkValidCharacters,
-  resetAll,
-  checkReset,
 };
