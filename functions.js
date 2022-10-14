@@ -71,7 +71,7 @@ const checkValidCharacters = (text) => {
   });
   return result.trim();
 };
-// you could put this into the above function
+
 const checkIfEmpty = (text) => {
   if (text.length === 0) {
     return true;
